@@ -3,6 +3,16 @@ import { motion } from 'framer-motion'
 import { styles } from '../styles'
 import { ComputersCanvas } from './canvas'
 
+const scrollToSection = () => {
+  const section = document.getElementById('about');
+  const offset = 100;
+  const elementPosition = section.getBoundingClientRect().top + window.pageYOffset;
+  
+  window.scrollTo({
+    top: elementPosition - offset,
+    behavior: 'smooth'
+  });
+}
 
 const Hero = () => {
   return (
@@ -22,7 +32,10 @@ const Hero = () => {
       <ComputersCanvas />
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center" >
-        <a href="#about">
+        <a href="#about"onClick={(e) => {
+        e.preventDefault(); // Prevent default anchor behavior
+        scrollToSection(); // Call your scrolling function
+        }}>
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div 
               animate={{
