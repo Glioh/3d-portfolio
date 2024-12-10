@@ -50,7 +50,7 @@ const services = [
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "ASP.NET Core Developer",
     icon: backend,
   },
   {
@@ -81,7 +81,7 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
+    name: "Svelte",
     icon: redux,
   },
   {
@@ -97,7 +97,7 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: "Three JS",
+    name: "ASP.NET Core",
     icon: threejs,
   },
   {
@@ -194,12 +194,12 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "AI-Powered Quiz Generation Platform",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Pioneered the development of a real-time quiz platform for 30+ teachers using webhooks, Fiber, and MongoDB, leveraging AI to generate quizzes to curb the issue of a limited user-content base.",
     tags: [
       {
-        name: "react",
+        name: "svelte",
         color: "blue-text-gradient",
       },
       {
@@ -207,49 +207,57 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "golang",
         color: "pink-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "yellow-text-gradient",
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Glioh/ai-quiz-project",
   },
   {
-    name: "Job IT",
+    name: "Web3 Crowdfunding Platform",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Developed a Web3 crowdfunding platform using Solidity, enabling secure Ethereum transactions with Metamask and smart contract integration for a seamless user experience.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "javascript",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "solidity",
         color: "pink-text-gradient",
+      },
+      {
+        name: "ethereum",
+        color: "yellow-text-gradient",
       },
     ],
     image: jobit,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "Autonomous Drone System and Navigation",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Collaborated on developing keyboard-based drone controls using Tello UAV, implementing a face tracking algorithm with 95% accuracy and engineering an autonomous line-following navigation system.",
     tags: [
       {
-        name: "nextjs",
+        name: "python",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "opencv",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "uav",
         color: "pink-text-gradient",
       },
     ],

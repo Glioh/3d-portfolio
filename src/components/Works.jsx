@@ -6,7 +6,7 @@ import { SectionWrapper } from '../hoc';
 import { projects } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link}) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, showGitHubIcon = false}) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index*0.5, 0.75)}>
       <Tilt
@@ -26,18 +26,20 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link})
             className="w-full h-full object-cover rounded-2xl"
           />
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img 
-                src={github}
-                alt="github"
-                className="w-1/2 h-1/2 object-contain"
-              />
+          {showGitHubIcon && (
+            <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+              <div
+                onClick={() => window.open(source_code_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <img 
+                  src={github}
+                  alt="github"
+                  className="w-1/2 h-1/2 object-contain"
+                />
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         <div className="mt-5">
@@ -61,8 +63,8 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link})
       </Tilt>
     </motion.div>
   )
-
 }
+
 
 const Works = () => {
   return (
@@ -81,7 +83,7 @@ const Works = () => {
           projects I've created. Below, you'll find a curated selection of work that highlights my 
           technical expertise, problem-solving approach, and ability to bring innovative ideas to life. 
           To provide a comprehensive view of my work, each project has a brief description with a direct 
-          link to the GitHub repository..
+          link to the GitHub repository if available.
         </motion.p>
       </div>
 
@@ -91,6 +93,7 @@ const Works = () => {
            key={`project-${index}`} 
            index={index}
            {...project}
+           showGitHubIcon={index === 0}
           />
         ))}
       </div>

@@ -25,6 +25,7 @@ import first from "./company/first.png";
 import iu13 from "./company/iu13.png";
 import lockhead from "./company/lockhead.png";
 import psu from "./company/psu.png";
+import resumePDF from "../assets/company/resumePDF.pdf"
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -54,9 +55,10 @@ export {
   threejs,
   iu13,
   lockhead,
-  psu,
+  psu,  
   first,
   carrent,
   jobit,
+  resumePDF,
   tripguide,
 };
